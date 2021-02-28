@@ -1,0 +1,7 @@
+@import '../../variables.scss';
+.WorkGraph {
+
+  .odph {
+    fill: lighten($color-primary, 20%);
+  }
+}

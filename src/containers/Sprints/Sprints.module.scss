@@ -1,0 +1,33 @@
+@import '../../variables.scss';
+
+.sprintList {
+  margin-left: 10rem;
+  display: flex;
+  flex-direction: column;
+
+  li {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: 2px solid transparent;
+    width: max-content;
+    background-color: $color-primary-light;
+    cursor: pointer;
+
+    transition: all .5s;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    &:hover {
+      border: 2px solid $color-primary;
+      transform: translateX(.5rem);
+    }
+  }
+}
+
+.currentSprint {
+  margin-top: 10rem;
+  margin-left: 10rem;
+}

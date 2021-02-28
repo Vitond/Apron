@@ -1,0 +1,24 @@
+.Event {
+  padding: 4rem;
+  box-shadow: 1px 2px 3px rgba(black, .18);
+
+  position: relative;
+
+  transition: all .2s;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  &__date {
+    font-size: 1.5rem;
+
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+  &__heading {
+    margin-bottom: 1rem;
+  }
+}
+

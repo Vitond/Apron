@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Member from './components/Member/Member';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Aux from './hoc/Aux';
+import Sprints from './containers/Sprints/Sprints';
+import Navigation from './components/Navigation/Navigation';
+import Estimates from './components/Estimates/Estimates';
+import Progress from './containers/Progress/Progress';
+
+class App extends Component {
+
+  render() {
+    return (
+      <div className="App">
+        <Aux>
+          <Navigation></Navigation>
+          <Member></Member>
+        </Aux>
+        <Switch>
+          <Route path="/sprints" component={Sprints}></Route>
+          <Route path="/estimates" component={Estimates}></Route>
+          <Route path="/projects"></Route>
+          <Route path="/meetings" render={() => {}}></Route>
+          <Route path="/progress" component={Progress}></Route>
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;

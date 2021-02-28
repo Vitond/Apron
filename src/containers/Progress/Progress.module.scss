@@ -1,0 +1,9 @@
+.Progress {
+  padding-left: 6rem;
+  padding-right: 6rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+  grid-gap: 3rem;
+  justify-content: center;
+}
